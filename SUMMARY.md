@@ -5,6 +5,10 @@
 * [Database Configuration](database-configuration.md)
 * [Deployment](deployment.md)
 
+## CLI
+
+* [Overview](cli/overview.md)
+
 ## AWS
 
 * [Authentication](aws/authentication.md)
@@ -28,6 +32,10 @@
 
 ## Kubernetes <a id="k8s"></a>
 
-* [Authentication](k8s/authentication.md)
 * [Reference](k8s/reference.md)
+* [Authentication](k8s/authentication.md)
+
+---
+
+* [Changelog](changelog.md)
 
