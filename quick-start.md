@@ -4,6 +4,8 @@
 
 You can download the precompiled binary from [releases](https://github.com/cloudquery/cloudquery/releases), or using CLI:
 
+{% tabs %}
+{% tab title="Pre-Compiled Binaries" %}
 ```bash
 export OS=Darwin # Possible values: Linux,Windows,Darwin
 curl -L https://github.com/cloudquery/cloudquery/releases/latest/download/cloudquery_${OS}_x86_64 -o cloudquery
@@ -14,14 +16,16 @@ chmod a+x cloudquery
 export VERSION= # specifiy a version
 curl -L https://github.com/cloudquery/cloudquery/releases/download/${VERSION}/cloudquery_${OS}_x86_64 -o cloudquery
 ```
+{% endtab %}
 
-For mac you can also install cloudquery via hombrew
-
+{% tab title="Homebrew" %}
 ```bash
 brew install cloudquery/tap/cloudquery
 # After initial install you can upgrade the version via:
 brew upgrade cloudquery
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Running
 
