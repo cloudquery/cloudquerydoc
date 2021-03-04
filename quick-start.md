@@ -25,6 +25,14 @@ brew install cloudquery/tap/cloudquery
 brew upgrade cloudquery
 ```
 {% endtab %}
+
+{% tab title="Docker" %}
+```
+# Dockers are hosted at github container registry https://github.com/orgs/cloudquery/packages/container/package/cloudquery
+docker pull ghcr.io/cloudquery/cloudquery:latest
+docker run -v /data:/data -it ghcr.io/cloudquery/cloudquery:latest --path /data/config.yml --dsn "host=localhost user=postgres password=pass DB.name=postgres port=5432"
+```
+{% endtab %}
 {% endtabs %}
 
 ## Running
