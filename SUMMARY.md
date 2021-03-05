@@ -35,7 +35,3 @@
 * [Reference](k8s/reference.md)
 * [Authentication](k8s/authentication.md)
 
----
-
-* [Changelog](changelog.md)
-
