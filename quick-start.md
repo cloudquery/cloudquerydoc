@@ -6,13 +6,18 @@ You can download the precompiled binary from [releases](https://github.com/cloud
 
 {% tabs %}
 {% tab title="Pre-Compiled Binaries" %}
+Download latest version:
+
 ```bash
 export OS=Darwin # Possible values: Linux,Windows,Darwin
 curl -L https://github.com/cloudquery/cloudquery/releases/latest/download/cloudquery_${OS}_x86_64 -o cloudquery
 chmod a+x cloudquery
-./cloudquery --help
+```
 
-# if you want to download a specific version and not latest use the following endpoint
+Download specific version:
+
+```bash
+export OS=Darwin # Possible values: Linux,Windows,Darwin
 export VERSION= # specifiy a version
 curl -L https://github.com/cloudquery/cloudquery/releases/download/${VERSION}/cloudquery_${OS}_x86_64 -o cloudquery
 ```
