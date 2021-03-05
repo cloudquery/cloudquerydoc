@@ -32,6 +32,8 @@ brew upgrade cloudquery
 {% endtab %}
 
 {% tab title="Docker" %}
+`config.yml` should be mounted so cloudquery can read it
+
 ```
 # Dockers are hosted at github container registry https://github.com/orgs/cloudquery/packages/container/package/cloudquery
 docker pull ghcr.io/cloudquery/cloudquery:latest
