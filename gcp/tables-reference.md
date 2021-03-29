@@ -1,10 +1,10 @@
 # Reference
 
-### Schema Reference
+## Schema Reference
 
-Schema is available at [https://schema.cloudquery.io](https://schema.cloudquery.io) \(filter by `gcp` prefix\) 
+Schema is available at [https://schema.cloudquery.io](https://schema.cloudquery.io) \(filter by `gcp` prefix\)
 
-### Config Reference
+## Config Reference
 
 Available resource you can specify in `config.yml`. You can also generate a default config containing all resources via `./cloudquery gen config gcp`
 
@@ -26,6 +26,5 @@ providers:
       - name: iam.project_roles
       - name: iam.service_accounts
       - name: storage.buckets
-
 ```
 

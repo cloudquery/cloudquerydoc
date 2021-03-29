@@ -44,13 +44,13 @@ Once your `config.yml` is generated run the following command to fetch the resou
 
 If you used the default `sqlite` provider you can run the following example queries
 
-#### List ec2\_images:
+### List ec2\_images:
 
 ```sql
 SELECT * FROM aws_ec2_images;
 ```
 
-#### Find all public facing AWS load balancers:
+### Find all public facing AWS load balancers:
 
 ```sql
 SELECT * FROM aws_elbv2_load_balancers WHERE scheme = 'internet-facing';
@@ -66,6 +66,6 @@ To run AWS CIS pack enter the following commands \(make sure you fetched all the
 
 ```bash
 ./cloudquery gen policy aws_cis
-./cloudquery query 
+./cloudquery query
 ```
 

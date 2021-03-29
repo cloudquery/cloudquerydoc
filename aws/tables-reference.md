@@ -1,15 +1,14 @@
 # Reference
 
-### Schema Reference
+## Schema Reference
 
-Schema is available at [https://schema.cloudquery.io](https://schema.cloudquery.io) \(filter by `aws` prefix\) 
+Schema is available at [https://schema.cloudquery.io](https://schema.cloudquery.io) \(filter by `aws` prefix\)
 
-### Config Reference
+## Config Reference
 
 Available resource you can specify in `config.yml`. You can also generate a default config containing all resources via `./cloudquery gen config aws`
 
 ```yaml
-
 providers:
   - name: aws
 #    accounts: # Optional. if you want to assume role to multiple account and fetch data from them
@@ -52,8 +51,6 @@ providers:
       - name: rds.db_subnet_groups
       - name: redshift.clusters
       - name: redshift.cluster_subnet_groups
-      - name: s3.buckets    
+      - name: s3.buckets
 ```
-
-### 
 

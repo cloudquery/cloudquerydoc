@@ -1,6 +1,6 @@
 # GCP Query Examples
 
-#### Find all buckets that have public facing read permissions
+## Find all buckets that have public facing read permissions
 
 ```sql
 SELECT gcp_storage_buckets.name

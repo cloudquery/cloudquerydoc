@@ -2,11 +2,11 @@
 
 cloudquery currently supports two types of databases: **Relational** - SQLite, MySQL, PostgreSQL, SQL Server and **graph** - Neo4j.
 
-### Relational
+## Relational
 
 {% tabs %}
 {% tab title="SQLite" %}
-This is the default behaviour ****that uses a local sqlite file as database. Works great for development and local testing.
+This is the default behaviour _\*\*_that uses a local sqlite file as database. Works great for development and local testing.
 
 ```bash
 ./cloudquery fetch # you can change the default sqlite.db file via --dsn
@@ -50,7 +50,7 @@ docker run -it -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433
 {% endtab %}
 {% endtabs %}
 
-### Graph
+## Graph
 
 {% tabs %}
 {% tab title="Neo4j" %}
@@ -77,6 +77,4 @@ docker run \
 Wanna see support for other graph database? Please open an [issue](https://github.com/cloudquery/cloudquery/issues):\)
 {% endtab %}
 {% endtabs %}
-
-
 
