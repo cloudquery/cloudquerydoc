@@ -9,6 +9,11 @@
 
 * [Overview](cli/overview.md)
 
+## Developers
+
+* [Architecture](developers/architecture.md)
+* [Developing New Provider](developers/developing-new-provider.md)
+
 ## AWS
 
 * [Authentication](aws/authentication.md)
