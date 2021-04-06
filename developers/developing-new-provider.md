@@ -1,4 +1,4 @@
-# Developing New Provider
+# Developing New Providers
 
 This section will go through what is needed to develop you own provider for cloudquery and optionally publish it in on cloudquery hub.
 

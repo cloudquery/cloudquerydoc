@@ -12,7 +12,7 @@
 ## Developers
 
 * [Architecture](developers/architecture.md)
-* [Developing New Provider](developers/developing-new-provider.md)
+* [Developing New Providers](developers/developing-new-provider.md)
 
 ## AWS
 
