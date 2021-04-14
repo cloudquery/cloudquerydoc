@@ -17,28 +17,8 @@ docker run -p 5432:5432 -e POSTGRES_PASSWORD=pass -d postgres
 ```
 {% endtab %}
 
-{% tab title="Neo4j" %}
-```bash
-./cloudquery fetch --driver neo4j --dsn "neo4j://neo4j:pass@localhost:7687"
-```
-
-To run a local Neo4j instance via [docker](https://hub.docker.com/_/neo4j):
-
-```bash
-docker run \
-    -p7474:7474 -p7687:7687 \
-    -d \
-    -v $HOME/neo4j/data:/data \
-    -v $HOME/neo4j/logs:/logs \
-    -v $HOME/neo4j/import:/var/lib/neo4j/import \
-    -v $HOME/neo4j/plugins:/plugins \
-    --env NEO4J_AUTH=neo4j/pass \
-    neo4j:latest
-```
-{% endtab %}
-
 {% tab title="Other" %}
-Wanna see support for other graph database? Please open an [issue](https://github.com/cloudquery/cloudquery/issues):\)
+Wanna see support for other database? Please open an [issue](https://github.com/cloudquery/cloudquery/issues):\)
 {% endtab %}
 {% endtabs %}
 

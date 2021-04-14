@@ -4,7 +4,7 @@ cloudquery transforms your cloud infrastructure into queryable SQL tables go Gra
 
 #### What is cloudquery and why use it?
 
-cloudquery pulls, normalize, expose and monitor your cloud infrastructure and SaaS apps as SQL or Graph\(Neo4j\) database. This abstracts various scattered APIs enabling you to define security, governance, cost and compliance policies with SQL or [Cypher\(Neo4j\)](https://neo4j.com/developer/cypher/).
+cloudquery pulls, normalize, expose and monitor your cloud infrastructure and SaaS apps as SQL database. This abstracts various scattered APIs enabling you to define security, governance, cost and compliance policies with SQL.
 
 cloudquery can be easily extended to more resources and SaaS providers \(open an [Issue](https://github.com/cloudquery/cloudquery/issues)\).
 
