@@ -13,6 +13,7 @@
 
 * [Architecture](developers/architecture.md)
 * [Developing New Providers](developers/developing-new-provider.md)
+* [Debugging](developers/debugging.md)
 
 ## AWS
 
