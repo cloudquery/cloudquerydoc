@@ -7,7 +7,7 @@ cloudquery currently supports two types of databases: **Relational** - PostgreSQ
 {% tabs %}
 {% tab title="PostgreSQL" %}
 ```bash
-./cloudquery fetch --driver postgresql --dsn "host=localhost user=postgres password=pass DB.name=postgres port=5432"
+./cloudquery fetch --driver postgresql --dsn "host=localhost user=postgres password=pass database=postgres port=5432"
 ```
 
 To run a local PostgreSQL instance via [docker](https://hub.docker.com/_/postgres):
