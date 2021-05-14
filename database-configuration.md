@@ -2,7 +2,7 @@
 
 cloudquery currently supports two types of databases: **Relational** - PostgreSQL and **graph** - Neo4j.
 
-### Relational
+## Relational
 
 {% tabs %}
 {% tab title="PostgreSQL" %}
@@ -21,6 +21,4 @@ docker run -p 5432:5432 -e POSTGRES_PASSWORD=pass -d postgres
 Wanna see support for other database? Please open an [issue](https://github.com/cloudquery/cloudquery/issues):\)
 {% endtab %}
 {% endtabs %}
-
-
 

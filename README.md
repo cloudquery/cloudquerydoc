@@ -1,6 +1,6 @@
 # Welcome to cloudquery
 
-cloudquery transforms your cloud infrastructure into queryable SQL tables go Graphs for easy monitoring, governance and security.
+cloudquery transforms your cloud infrastructure into queryable SQL tables for easy monitoring, governance and security.
 
 #### What is cloudquery and why use it?
 
