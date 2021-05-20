@@ -1,3 +1,7 @@
+---
+description: How to authenticate with AWS provider
+---
+
 # Authentication
 
 You should be authenticated with an AWS account with correct permission with either option \(see full [documentation](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html)\):

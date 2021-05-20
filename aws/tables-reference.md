@@ -6,53 +6,88 @@ Schema is available at [https://schema.cloudquery.io](https://schema.cloudquery.
 
 ### Config Reference
 
-Available resource you can specify in `config.yml`. You can also generate a default config containing all resources via `./cloudquery gen config aws`
+Available resource you can specify in `config.hcl`. You can also generate a default config containing all resources via `./cloudquery init aws`
 
 ```yaml
-
-providers:
-  - name: aws
-#    accounts: # Optional. if you want to assume role to multiple account and fetch data from them
-#      - role_arn: arn:aws:iam::966797507899:role/user
-#    regions: # Optional. if commented out assumes all regions
-#      - us-east-1
-#      - us-west-2
-#    log_level: debug # Optional. if commented out will enable AWS SDK debug logging. possible values: debug, debug_with_signing, debug_with_http_body, debug_with_request_retries, debug_with_request_error, debug_with_event_stream_body
-#    max_retries: # Optional. The maximum number of times that a request will be retried for failures. Defaults to -1, which defers the max retry setting to the service specific configuration.
-    resources: # You can comment resources your are not interested in for faster fetching.
-      - name: autoscaling.launch_configurations
-      - name: cloudtrail.trails
-      - name: directconnect.gateways
-      - name: ec2.customer_gateways
-      - name: ec2.flow_logs
-      - name: ec2.images
-      - name: ec2.instances
-      - name: ec2.internet_gateways
-      - name: ec2.nat_gateways
-      - name: ec2.network_acls
-      - name: ec2.route_tables
-      - name: ec2.security_groups
-      - name: ec2.subnets
-      - name: ec2.vpc_peering_connections
-      - name: ec2.vpcs
-      - name: ecs.clusters
-      - name: efs.filesystems
-      - name: elasticbeanstalk.environments
-      - name: elbv2.load_balancers
-      - name: emr.clusters
-      - name: fsx.backups
-      - name: iam.groups
-      - name: iam.password_policies
-      - name: iam.policies
-      - name: iam.roles
-      - name: iam.users
-      - name: kms.keys
-      - name: rds.certificates
-      - name: rds.clusters
-      - name: rds.db_subnet_groups
-      - name: redshift.clusters
-      - name: redshift.cluster_subnet_groups
-      - name: s3.buckets    
+provider "aws" {
+  configuration {
+    // Optional. if you want to assume role to multiple account and fetch data from them
+    //accounts "<YOUR ID>"{
+    // Optional. Role ARN we want to assume when accessing this account
+    // role_arn = <YOUR_ROLE_ARN>
+    // }
+    // Optional. by default assumes all regions
+    //    regions = [
+    //      "us-east-1",
+    //      "us-west-2",
+    //    ]
+    // Optional. Enable AWS SDK debug logging.
+    aws_debug = false
+    // The maximum number of times that a request will be retried for failures. Defaults to 5 retry attempts.
+    max_retries = 7
+    // The maximum back off delay between attempts. The backoff delays exponentially with a jitter based on the number of attempts. Defaults to 60 seconds.
+    max_backoff = 60
+  }
+  resources = [
+    "autoscaling.launch_configurations",
+    "cloudfront.distributions",
+    "cloudfront.cache_policies",
+    "cloudtrail.trails",
+    "cloudwatch.alarms",
+    "cloudwatchlogs.filters",
+    "s3.buckets",
+    "directconnect.gateways",
+    "directconnect.virtual_gateways",
+    "directconnect.virtual_interfaces",
+    "ec2.byoip_cidrs",
+    "ec2.customer_gateways",
+    "ec2.flow_logs",
+    "ec2.images",
+    "ec2.internet_gateways",
+    "ec2.nat_gateways",
+    "ec2.network_acls",
+    "ec2.route_tables",
+    "ec2.subnets",
+    "ec2.transit_gateways",
+    "ec2.vpc_peering_connections",
+    "ec2.vpc_endpoints",
+    "ec2.vpcs",
+    "ec2.instances",
+    "ec2.security_groups",
+    "ec2.ebs_volumes",
+    "ecr.repositories",
+    "efs.filesystems",
+    "eks.clusters",
+    "ecs.clusters",
+    "elasticbeanstalk.environments",
+    "elbv2.target_groups",
+    "elbv2.load_balancers",
+    "emr.clusters",
+    "fsx.backups",
+    "iam.groups",
+    "iam.policies",
+    "iam.password_policies",
+    "iam.roles",
+    "iam.users",
+    "iam.virtual_mfa_devices",
+    "iam.openid_connect_identity_providers",
+    "iam.saml_identity_providers",
+    "kms.keys",
+    "organizations.accounts",
+    "sns.topics",
+    "sns.subscriptions",
+    "rds.certificates",
+    "rds.clusters",
+    "rds.db_subnet_groups",
+    "rds.instances",
+    "redshift.clusters",
+    "redshift.subnet_groups",
+    "route53.reusable_delegation_sets",
+    "route53.health_checks",
+    "route53.hosted_zones",
+    "route53.traffic_policies",
+  ]
+}
 ```
 
 ### 

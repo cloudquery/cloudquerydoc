@@ -23,6 +23,7 @@
 
 ## Azure
 
+* [Authentication](azure/authentication.md)
 * [Reference](azure/reference.md)
 
 ## GCP
@@ -30,14 +31,4 @@
 * [Authentication](gcp/authentication.md)
 * [GCP Query Examples](gcp/gcp-query-examples.md)
 * [Reference](gcp/tables-reference.md)
-
-## Okta
-
-* [Authentication](okta/authentication.md)
-* [Reference](okta/table-reference.md)
-
-## Kubernetes <a id="k8s"></a>
-
-* [Reference](k8s/reference.md)
-* [Authentication](k8s/authentication.md)
 

@@ -58,7 +58,7 @@ After executing the provider we will get a message of how to reattach our provid
 ```go
 // Path where we executed our aws provider
 export CQ_REATTACH_PROVIDERS=/providers/cq-provider-aws/.cq_reattach
-./cloudquery fetch --driver postgresql --dsn "host=localhost user=postgres password=pass DB.name=postgres port=5432"
+./cloudquery fetch --dsn "host=localhost user=postgres password=pass DB.name=postgres port=5432"
 ```
 
 {% hint style="info" %}
