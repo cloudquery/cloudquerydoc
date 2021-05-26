@@ -19,3 +19,9 @@ In your `config.hcl` you need to specify one or more`role_arn` if you want to qu
      - role_arn: <arn>
 ```
 
+{% hint style="info" %}
+Usually cloudquery runs with ReadOnlyPermissions so it can access all the necessary resources but won't be able make any changes.
+{% endhint %}
+
+
+
