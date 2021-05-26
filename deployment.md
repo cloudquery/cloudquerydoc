@@ -7,7 +7,7 @@ CloudQuery currently has out-of-the box [terraform](https://github.com/cloudquer
 To apply the terraform files you should be [authenticated](aws/authentication.md) with your AWS account.
 
 ```bash
-make config # Compiles the binary and creates config.yml
+make config # Compiles the binary and creates config.hcl
 make plan # run terraform plan command
 make apply # run terraform apply command
 ```

@@ -12,7 +12,7 @@ You should be authenticated with an AWS account with correct permission with eit
 
 Multi-account AWS support is available by using an account which can [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) to other accounts.
 
-In your `config.yml` you need to specify one or more`role_arn` if you want to query multiple accounts in the following way:
+In your `config.hcl` you need to specify one or more`role_arn` if you want to query multiple accounts in the following way:
 
 ```yaml
  accounts:
