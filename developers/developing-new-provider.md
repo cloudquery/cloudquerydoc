@@ -20,7 +20,7 @@ func Plugin() *plugin.Provider {
 		ResourceMap: map[string]*schema.Table{
 			"resource_name": resources.ResourceName(),
 		},
-		Config: func() interface{} {
+		Config: func() provider.Config {
 			return &provider.Config{}
 		},
 	}
@@ -30,28 +30,42 @@ func Plugin() *plugin.Provider {
 
 In this file everything is already set-up for you and you only need to change `Name` to match your provider name and add new resource to `ResourceMap`  as you implement them and add them to your provider.
 
-**provider/config.go**
+**client/config.go**
 
 ```go
-package provider
+package client
 
 // Provider Configuration
+type Account struct {
+    Name string `hcl:"name,optional"`
+}
 
 type Config struct {
-	// here goes top level configuration for your provider
-	// This object will be pass filled in depending on user's configuration
-	ExampleConfig  bool      `yaml:"example_config"`
+    Account []Account `hcl:"account,block"`
+    User string `hcl:"user,optional"`
+    Debug bool `hcl:"debug,optional"`
+}
 
-	// resources that user asked to fetch
-	// each resource can have optional additional configurations
-	Resources  []struct {
-		Name  string
-		Other map[string]interface{} `yaml:",inline"`
-	}
+
+// Pass example to cloudquery when cloudqueyr init <provider> will be called
+func (c Config) Example() string {
+    return `configuration {
+    
+	// Optional. create multiple blocks of accounts the provider will run
+  // account {
+	// name = <Name attribute>
+	// }
+	
+	// Optional. Some field we decided to add
+	user = "cloudquery"
+	// Optional. Enable Provider SDK debug logging.
+   debug = false  
+}
+`
 }
 ```
 
-Here you define the YAML configuration that the user can pass to your provider. This config is parsed and populated by the SDK so you don’t need to deal with YAML marshaling/unmarshalling.  The populated config object is passed to **provider.Configure** function in **client.go.**
+Here you define the "hcl block" configuration that the user can pass to your provider. This config is parsed and populated by the SDK so you don’t need to deal with HCL marshaling/unmarshalling.  The populated config object is passed to **provider.Configure** function in **client.go.**
 
 **provider/client.go**
 
@@ -67,7 +81,7 @@ func (c *Client) Logger() hclog.Logger {
 }
 
 
-func Configure(logger hclog.Logger, config interface{}) (schema.ClientMeta, error) {
+func Configure(logger hclog.Logger, providerConfig interface{}) (schema.ClientMeta, error) {
 	providerConfig := config.(*Config)
 
 	// Init your client and 3rd party clients using the user's configuration
@@ -187,5 +201,5 @@ Essentially for each resource that you support you just need to define two thing
 
 * The schema - how the table will look in the database - column names and types. 
 * Implement the main table resolver function that will fetch the data from the 3rd party SDK and pass it to the SDK. 
-  * The SDK will automatically read the data and insert into the table column using a default naming convention. The default naming convention is to UperCase i.e if a column-name is `some_name` the field name in the struct that you pass to the sdk should be: `SomeName` . If you want a different name or logic you can implement a column resolver.
+  * The SDK will automatically read the data and insert into the table column using a default naming convention. The default naming convention is to CamelCase i.e if a column-name is `some_name` the field name in the struct that you pass to the sdk should be: `SomeName` . If you want a different name or logic you can implement a column resolver.
 
