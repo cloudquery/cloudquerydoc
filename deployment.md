@@ -4,7 +4,7 @@
 
 CloudQuery currently has out-of-the box [terraform](https://github.com/cloudquery/cloudquery/tree/main/deploy/aws/terraform) that will deploy it as a lambda function and a MySQL RDS instance.
 
-To apply the terraform files you should be [authenticated](aws/authentication.md) with your AWS account.
+To apply the terraform files you should be [authenticated]() with your AWS account.
 
 ```bash
 make config # Compiles the binary and creates config.hcl

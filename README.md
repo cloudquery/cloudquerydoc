@@ -17,7 +17,7 @@ Think about cloudquery as a compliance-as-code tool inspired by tools like [osqu
 * Homepage: [https://cloudquery.io](https://cloudquery.io/)
 * Releases: [https://github.com/cloudquery/cloudquery/releases](https://github.com/cloudquery/cloudquery/releases)
 * Documentation: [https://docs.cloudquery.io](https://docs.cloudquery.io/)
-* Schema explorer \(schemaspy\): [https://schema.cloudquery.io/](https://schema.cloudquery.io/)
+* CloudQuery Hub \(Provider Documentation\): [https://hub.cloudquery.io/](https://schema.cloudquery.io/)
 * Database Configuration: [https://docs.cloudquery.io/database-configuration](https://docs.cloudquery.io/database-configuration)
 
 
