@@ -12,7 +12,7 @@
 
 ## Policy
 
-* [Write your own Policy](policy/policy.md)
+* [Syntax](policy/policy.md)
 
 ## Developers
 
