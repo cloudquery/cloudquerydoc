@@ -1,6 +1,6 @@
 # Overview
 
-The command line interface to Cloudquery is via the `cloudquery` command, which accepts a variety of subcommands such as `cloudquery init` or `cloudquery fetch`. See  full list of all of the supported bellow.
+The command line interface to Cloudquery is via the `cloudquery` command, which accepts a variety of subcommands such as `cloudquery init` or `cloudquery fetch`. See  full list of all the supported bellow.
 
 We refer to the `cloudquery` command line tool as "Clouddquery CLI" elsewhere in the documentation.
 
